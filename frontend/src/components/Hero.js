@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const MaskedLine = ({ children, delay = 0, className = "" }) => (
-  <div className="overflow-hidden">
+  <div className="-mx-4 -mb-2 overflow-hidden px-4 pb-2">
     <motion.div
       className={className}
       initial={{ y: "115%" }}
@@ -24,16 +24,6 @@ export default function Hero() {
   return (
     <header ref={ref} className="relative flex min-h-[100dvh] flex-col items-center justify-center px-6 text-center" data-testid="hero">
       <motion.div style={{ y, opacity }} className="flex flex-col items-center">
-        <MaskedLine delay={0.05} className="mb-5">
-          <div className="flex justify-center">
-            <img
-              src="/assets/radha-krishna.png"
-              alt="Radha Krishna"
-              data-testid="hero-deity"
-              className="h-16 drop-shadow-[0_0_18px_rgba(212,175,55,0.45)]"
-            />
-          </div>
-        </MaskedLine>
         <MaskedLine delay={0.15}>
           <p className="font-prose text-xs uppercase italic tracking-[0.5em] text-[#e5c374]/85">
             The Wedding Of
@@ -54,20 +44,6 @@ export default function Hero() {
             </h1>
           </MaskedLine>
         </div>
-        <MaskedLine delay={0.9} className="mt-8">
-          <div className="flex items-center justify-center gap-4">
-            <span className="gold-rule w-10" />
-            <p className="font-display text-sm tracking-[0.35em] text-[#e5c374]" data-testid="hero-date">
-              21 &middot; 11 &middot; 2026
-            </p>
-            <span className="gold-rule w-10" />
-          </div>
-        </MaskedLine>
-        <MaskedLine delay={1.05} className="mt-3">
-          <p className="font-prose text-sm italic tracking-widest text-[#f0e6d2]/70">
-            Saturday &middot; 8:56 PM &middot; Mithuna Lagnam
-          </p>
-        </MaskedLine>
       </motion.div>
 
       <motion.div

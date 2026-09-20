@@ -45,6 +45,12 @@ Mobile-first wedding invitation webpage: a dog video (Video1) asks the guest to 
 - Radha Krishna transparent artwork (StickPNG, 525x830 RGBA) added as: golden-glow floating emblem atop Chapter 01 (mirrors the deity emblem on the physical card), small emblem above the hero names, and a faint 9%-opacity watermark in the fixed background
 - RSVP preference noted for later: wishes only, no attendance fields
 
+## Implemented (20 Sep 2026 — iteration 4, visual edits)
+- Hero: removed Radha Krishna emblem and the two date lines; fixed script-font swash cropping (padded mask) so "Sekhar"'s S renders fully
+- Names updated to full forms: Raja Sekhar & Meena Kumari (hero keeps short names)
+- Chapter 01: removed floating deity emblem and the closing "Kindly grace…" paragraph
+- Background: user's uploaded peacock photo now clearly visible as blurred page background (fixed stacking bug — opaque .App/body backgrounds were painting over the -z-10 layer; removed them). Overlay tuned to 55% for readability, Radha Krishna watermark faintly behind hero
+
 ## Backlog
 - P1: Guest wishes form (wishes only, per user) — needs backend + MongoDB
 - P2: Multi-language toggle (Telugu / English)

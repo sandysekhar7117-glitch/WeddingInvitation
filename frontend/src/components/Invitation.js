@@ -32,15 +32,15 @@ export default function Invitation({ onReplay, toggleMute }) {
         <img
           src="/assets/background.jpg"
           alt=""
-          className="h-full w-full scale-110 object-cover blur-[10px]"
+          className="h-full w-full scale-110 object-cover blur-[6px]"
         />
-        <div className="absolute inset-0 bg-[#061614]/75" />
+        <div className="absolute inset-0 bg-[#061614]/55" />
         <img
           src="/assets/radha-krishna.png"
           alt=""
           className="absolute bottom-0 left-1/2 h-[65vh] -translate-x-1/2 opacity-[0.09]"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#061614]/60 via-transparent to-[#061614]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#061614]/35 via-transparent to-[#061614]/80" />
       </motion.div>
       <div className="grain" />
       <MusicToggle toggleMute={toggleMute} />
@@ -50,18 +50,6 @@ export default function Invitation({ onReplay, toggleMute }) {
 
       <main className="mx-auto max-w-xl px-6">
         <Chapter index="01" title="The Invitation" testid="chapter-invitation">
-          <motion.div
-            animate={{ y: [0, -8, 0] }}
-            transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-            className="mb-8 flex justify-center"
-          >
-            <img
-              src="/assets/radha-krishna.png"
-              alt="Radha Krishna blessing"
-              data-testid="invitation-deity"
-              className="h-44 drop-shadow-[0_0_30px_rgba(212,175,55,0.35)]"
-            />
-          </motion.div>
           <p className="text-center font-prose text-sm italic tracking-[0.2em] text-[#e5c374]/90">
             || Srirasthu ||&nbsp;&nbsp;|| Shubhamasthu ||&nbsp;&nbsp;|| Avighnamasthu ||
           </p>
@@ -75,21 +63,16 @@ export default function Invitation({ onReplay, toggleMute }) {
               <span className="italic">solicits your gracious presence at the wedding ceremony of</span>
             </p>
             <div className="glass rounded-2xl px-6 py-7">
-              <p className="font-script text-5xl text-[#e5c374]" data-testid="groom-name">Sekhar</p>
+              <p className="font-script text-5xl text-[#e5c374]" data-testid="groom-name">Raja Sekhar</p>
               <p className="mt-2 text-sm italic text-[#f0e6d2]/75">
                 (Youngest S/o. Late Smt. Seemavaram Srivalli<br />&amp; Late Sri Seethaiah)
               </p>
               <p className="my-4 font-prose text-base italic text-[#e5c374]">with</p>
-              <p className="font-script text-5xl text-[#e5c374]" data-testid="bride-name">Meena</p>
+              <p className="font-script text-5xl text-[#e5c374]" data-testid="bride-name">Meena Kumari</p>
               <p className="mt-2 text-sm italic text-[#f0e6d2]/75">
                 (Youngest D/o. Sri Ponugupati Srinivasa Rao<br />&amp; Smt. Lalitha)
               </p>
             </div>
-            <p className="italic">
-              Kindly grace the occasion with your presence on<br />
-              <span className="text-[#e5c374]">Saturday, 21st November 2026 at 8:56 p.m.</span><br />
-              <span className="font-display not-italic tracking-widest">&ldquo;Mithuna Lagnam&rdquo;</span>
-            </p>
           </div>
         </Chapter>
 

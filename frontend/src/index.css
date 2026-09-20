@@ -21,7 +21,6 @@ html {
 body {
     margin: 0;
     font-family: 'Cormorant Garamond', Georgia, serif;
-    background: var(--ink);
     color: var(--ivory);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
