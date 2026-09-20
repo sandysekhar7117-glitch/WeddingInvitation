@@ -2,7 +2,6 @@ import { useCallback, useRef, useState } from "react";
 import "@/App.css";
 import { AnimatePresence, motion } from "framer-motion";
 import DoorStage from "@/components/DoorStage";
-import OpeningStage from "@/components/OpeningStage";
 import Invitation from "@/components/Invitation";
 
 function App() {
@@ -18,28 +17,26 @@ function App() {
     return audioRef.current;
   };
 
-  const handleTapDoor = useCallback(() => {
-    ensureAudio().play().catch(() => {});
-    setStage("opening");
+  const handleOpened = useCallback(() => {
+    setStage("invite");
+    ensureAudio().play()
+      .then(() => { window.__musicState = "playing"; })
+      .catch((e) => { window.__musicState = "blocked:" + e.name; });
   }, []);
 
   const toggleMute = useCallback(() => {
     const audio = ensureAudio();
+    if (audio.paused) audio.play().catch(() => {});
     audio.muted = !audio.muted;
     return audio.muted;
   }, []);
 
   return (
     <div className="App">
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         {stage === "door" && (
-          <motion.div key="door" exit={{ opacity: 0, scale: 1.05 }} transition={{ duration: 0.55, ease: "easeInOut" }}>
-            <DoorStage onTap={handleTapDoor} />
-          </motion.div>
-        )}
-        {stage === "opening" && (
-          <motion.div key="opening" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.6 }}>
-            <OpeningStage onDone={() => setStage("invite")} />
+          <motion.div key="door" exit={{ opacity: 0 }} transition={{ duration: 0.8, ease: "easeInOut" }}>
+            <DoorStage onDone={handleOpened} />
           </motion.div>
         )}
         {stage === "invite" && (

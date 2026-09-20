@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Heart } from "lucide-react";
+import { Heart, X } from "lucide-react";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
 import Chapter from "@/components/Chapter";
@@ -106,6 +106,14 @@ export default function Invitation({ onReplay, toggleMute }) {
           <div className="mt-8 flex items-center justify-center gap-2 font-script text-3xl text-[#e5c374]">
             S <Heart className="h-4 w-4 fill-[#e0655f] text-[#e0655f]" /> M
           </div>
+          <button
+            data-testid="close-invitation-button"
+            onClick={onReplay}
+            aria-label="Close the invitation"
+            className="mx-auto mt-10 flex h-10 w-10 items-center justify-center rounded-full border border-[#f0e6d2]/25 text-[#f0e6d2]/60 transition-all hover:scale-110 hover:border-[#d4af37]/60 hover:text-[#e5c374]"
+          >
+            <X className="h-4 w-4" />
+          </button>
         </footer>
       </main>
     </div>

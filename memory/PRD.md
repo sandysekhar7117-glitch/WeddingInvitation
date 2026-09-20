@@ -56,10 +56,18 @@ Mobile-first wedding invitation webpage: a dog video (Video1) asks the guest to 
 - Removed the transparent Radha Krishna watermark sticker (superseded by the photographic backgrounds)
 - Hero names sit over the glowing moon with a radial vignette for readability
 
+## Implemented (20 Sep 2026 — iteration 6, bug fix + media swap)
+- Fixed blank-screen bug: door and door-opening are now ONE stage — video2 preloads behind the door and crossfades in on tap with the petal burst firing at the same moment; no stage-swap gap (was AnimatePresence mode="wait" serial exit/enter)
+- Slow-network/Android hardening: both videos <1 MB with faststart, poster frame shows instantly, 15s fallback + Skip button guarantee the invitation always appears
+- Song replaced with user's new upload (Sundari Nene Nuvvanta flute BGM); now starts only AFTER the doors open (invitation reveal), loops, mute toggle retained (also resumes playback if blocked)
+- Small circular X close icon added at the very end of the invitation (footer) — returns to the door
+- OpeningStage.js deleted (merged into DoorStage)
+
 ## Backlog
 - P1: Guest wishes form (wishes only, per user) — needs backend + MongoDB
 - P2: Multi-language toggle (Telugu / English)
+- P2: User mentioned a "hand and leg video" to play after the doors — not uploaded yet; add if provided
 
 ## Next Tasks
 1. Build wishes-only guest form if user confirms
-2. Optional: Telugu translations of the invitation text
+2. Add hand/leg video between opening and invitation if user uploads it
