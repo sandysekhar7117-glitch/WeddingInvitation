@@ -34,14 +34,17 @@ Mobile-first wedding invitation webpage: a dog video (Video1) asks the guest to 
 - Media assets return HTTP 206 (range) correctly
 - No auth/credentials needed for this app
 
+## Implemented (20 Sep 2026 — iteration 2)
+- Compressed video1.mp4 from 28.8 MB to 0.92 MB (720px, CRF 28, no audio, faststart) + poster frame so the door paints instantly
+- OG/Twitter share meta tags with custom 1200x630 og-image.jpg (temple photo) — WhatsApp/social link previews show Sekhar & Meena's names
+- New Chapter 03 "The Couple": editorial gallery with 5 user photos (auto-rotated upright, resized to 1600px, lazy-loaded), clipped-frame reveals, gold offset frames, roman-numeral captions; Venue/Celebrations renumbered to 04/05
+- Removed door-stage overlay text that clashed with text baked into the video
+
 ## Backlog
 - P1: RSVP / guest wishes form (needs backend + MongoDB)
-- P1: Photo gallery of the couple
 - P2: Multi-language toggle (Telugu / English)
-- P2: Optimized/compressed video1 for faster first load (currently 28 MB)
-- P2: OG share image + meta tags for rich WhatsApp preview
+- P2: Compress video2.mp4 further (currently 5.5 MB)
 
 ## Next Tasks
 1. Ask user if RSVP form is wanted
-2. Compress video1.mp4 with ffmpeg if available
-3. Add OG meta tags for link previews
+2. Optional: compress video2.mp4

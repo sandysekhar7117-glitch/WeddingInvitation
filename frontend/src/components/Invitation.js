@@ -7,6 +7,7 @@ import Marquee from "@/components/Marquee";
 import Chapter from "@/components/Chapter";
 import ScratchCard from "@/components/ScratchCard";
 import Countdown from "@/components/Countdown";
+import GallerySection from "@/components/GallerySection";
 import VenueSection from "@/components/VenueSection";
 import TimelineSection from "@/components/TimelineSection";
 import ActionBar from "@/components/ActionBar";
@@ -85,11 +86,15 @@ export default function Invitation({ onReplay, toggleMute }) {
           </div>
         </Chapter>
 
-        <Chapter index="03" title="The Venue" testid="chapter-venue">
+        <Chapter index="03" title="The Couple" testid="chapter-couple">
+          <GallerySection />
+        </Chapter>
+
+        <Chapter index="04" title="The Venue" testid="chapter-venue">
           <VenueSection />
         </Chapter>
 
-        <Chapter index="04" title="The Celebrations" testid="chapter-celebrations">
+        <Chapter index="05" title="The Celebrations" testid="chapter-celebrations">
           <TimelineSection />
         </Chapter>
 

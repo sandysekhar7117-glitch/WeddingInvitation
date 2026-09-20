@@ -6,6 +6,7 @@ export default function DoorStage({ onTap }) {
       <video
         data-testid="door-video"
         src="/assets/video1.mp4"
+        poster="/assets/door-poster.jpg"
         autoPlay
         muted
         loop
@@ -13,15 +14,7 @@ export default function DoorStage({ onTap }) {
         preload="auto"
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/55 via-transparent to-black/75" />
-
-      <div className="pointer-events-none absolute inset-x-0 top-10 flex flex-col items-center gap-3 px-6 text-center">
-        <span className="font-script text-4xl text-[#e5c374]" data-testid="door-monogram">S &amp; M</span>
-        <span className="gold-rule w-24" />
-        <p className="font-prose text-xs uppercase italic tracking-[0.4em] text-[#f0e6d2]/85">
-          You are cordially invited
-        </p>
-      </div>
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/70" />
 
       <button
         data-testid="door-tap-button"
