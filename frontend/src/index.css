@@ -118,6 +118,21 @@ button:active .tap-core {
     to { transform: translateX(-50%); }
 }
 
+/* ---- golden light sweep over script names ---- */
+.shine-text {
+    background: linear-gradient(110deg, #f0e6d2 40%, #ecc96a 50%, #f0e6d2 60%);
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine-sweep 8s ease-in-out 1.8s infinite;
+}
+@keyframes shine-sweep {
+    0% { background-position: 130% 0; }
+    45% { background-position: -130% 0; }
+    100% { background-position: -130% 0; }
+}
+
 /* ---- grain overlay ---- */
 .grain {
     position: fixed;

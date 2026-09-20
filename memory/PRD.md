@@ -67,6 +67,10 @@ Mobile-first wedding invitation webpage: a dog video (Video1) asks the guest to 
 - Music now starts on the door tap (per user) instead of after the opening
 - Chapter 03 "The Couple" rebuilt as a swipeable card deck ("stacked like a book"): photos stacked with rotation/offset, drag/swipe right to cycle, cards loop to the back, gold dot indicator + next arrow button, captions overlaid on each card
 
+## Implemented (20 Sep 2026 — iteration 8)
+- Hero title enhanced: eyebrow expands letter-spacing cinematically, "&" spring-pops in, a gold light sweep travels across the script names every few seconds, gold flourish line draws under the names
+- Close icon behavior changed: clicking X now stops the song (pause + rewind) and shows a farewell screen ("The doors are now closed." with S♥M monogram) — it no longer returns to the door page
+
 ## Backlog
 - P1: Guest wishes form (wishes only, per user) — needs backend + MongoDB
 - P2: Multi-language toggle (Telugu / English)

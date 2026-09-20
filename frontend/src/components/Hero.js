@@ -27,25 +27,41 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[#061614]/40" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,22,20,0.55)_0%,transparent_72%)]" />
       <motion.div style={{ y, opacity }} className="relative z-10 flex flex-col items-center">
-        <MaskedLine delay={0.15}>
-          <p className="font-prose text-xs uppercase italic tracking-[0.5em] text-[#e5c374]/85">
-            The Wedding Of
-          </p>
-        </MaskedLine>
+        <motion.p
+          initial={{ opacity: 0, letterSpacing: "1.1em" }}
+          animate={{ opacity: 1, letterSpacing: "0.5em" }}
+          transition={{ duration: 1.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          className="font-prose text-xs uppercase italic text-[#e5c374]/85"
+        >
+          The Wedding Of
+        </motion.p>
         <div className="mt-6" data-testid="hero-names">
-          <MaskedLine delay={0.35}>
-            <h1 className="font-script text-7xl leading-tight text-[#f0e6d2] drop-shadow-[0_2px_24px_rgba(212,175,55,0.35)] sm:text-8xl">
+          <MaskedLine delay={0.4}>
+            <h1 className="shine-text font-script text-7xl leading-tight drop-shadow-[0_3px_20px_rgba(6,22,20,0.65)] sm:text-8xl">
               Sekhar
             </h1>
           </MaskedLine>
-          <MaskedLine delay={0.5}>
-            <p className="my-1 font-display text-3xl font-light italic text-[#d4af37]">&amp;</p>
-          </MaskedLine>
-          <MaskedLine delay={0.65}>
-            <h1 className="font-script text-7xl leading-tight text-[#f0e6d2] drop-shadow-[0_2px_24px_rgba(212,175,55,0.35)] sm:text-8xl">
+          <div className="overflow-hidden">
+            <motion.p
+              initial={{ scale: 0, rotate: -40, opacity: 0 }}
+              animate={{ scale: 1, rotate: 0, opacity: 1 }}
+              transition={{ type: "spring", stiffness: 200, damping: 12, delay: 1.15 }}
+              className="my-1 font-display text-3xl font-light italic text-[#d4af37]"
+            >
+              &amp;
+            </motion.p>
+          </div>
+          <MaskedLine delay={0.75}>
+            <h1 className="shine-text font-script text-7xl leading-tight drop-shadow-[0_3px_20px_rgba(6,22,20,0.65)] sm:text-8xl">
               Meena
             </h1>
           </MaskedLine>
+          <motion.span
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 1.1, delay: 1.5, ease: [0.22, 1, 0.36, 1] }}
+            className="gold-rule mx-auto mt-5 block w-40"
+          />
         </div>
       </motion.div>
 

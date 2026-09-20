@@ -13,7 +13,7 @@ import TimelineSection from "@/components/TimelineSection";
 import ActionBar from "@/components/ActionBar";
 import MusicToggle from "@/components/MusicToggle";
 
-export default function Invitation({ onReplay, toggleMute }) {
+export default function Invitation({ onReplay, onClose, toggleMute }) {
   const bgRef = useRef(null);
   const { scrollY } = useScroll();
   const bgY = useTransform(scrollY, [0, 1600], [0, 160]);
@@ -108,7 +108,7 @@ export default function Invitation({ onReplay, toggleMute }) {
           </div>
           <button
             data-testid="close-invitation-button"
-            onClick={onReplay}
+            onClick={onClose}
             aria-label="Close the invitation"
             className="mx-auto mt-10 flex h-10 w-10 items-center justify-center rounded-full border border-[#f0e6d2]/25 text-[#f0e6d2]/60 transition-all hover:scale-110 hover:border-[#d4af37]/60 hover:text-[#e5c374]"
           >

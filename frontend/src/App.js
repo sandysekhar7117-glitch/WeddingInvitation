@@ -3,6 +3,7 @@ import "@/App.css";
 import { AnimatePresence, motion } from "framer-motion";
 import DoorStage from "@/components/DoorStage";
 import Invitation from "@/components/Invitation";
+import ClosedScreen from "@/components/ClosedScreen";
 
 function App() {
   const [stage, setStage] = useState("door");
@@ -27,6 +28,15 @@ function App() {
     setStage("invite");
   }, []);
 
+  const handleClose = useCallback(() => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+    window.__musicState = "stopped";
+    setStage("closed");
+  }, []);
+
   const toggleMute = useCallback(() => {
     const audio = ensureAudio();
     if (audio.paused) audio.play().catch(() => {});
@@ -43,8 +53,13 @@ function App() {
           </motion.div>
         )}
         {stage === "invite" && (
-          <motion.div key="invite" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.1, ease: "easeOut" }}>
-            <Invitation onReplay={() => setStage("door")} toggleMute={toggleMute} />
+          <motion.div key="invite" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 1.1, ease: "easeOut" }}>
+            <Invitation onReplay={() => setStage("door")} onClose={handleClose} toggleMute={toggleMute} />
+          </motion.div>
+        )}
+        {stage === "closed" && (
+          <motion.div key="closed" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.9, ease: "easeOut" }}>
+            <ClosedScreen />
           </motion.div>
         )}
       </AnimatePresence>
