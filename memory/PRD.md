@@ -63,6 +63,10 @@ Mobile-first wedding invitation webpage: a dog video (Video1) asks the guest to 
 - Small circular X close icon added at the very end of the invitation (footer) — returns to the door
 - OpeningStage.js deleted (merged into DoorStage)
 
+## Implemented (20 Sep 2026 — iteration 7)
+- Music now starts on the door tap (per user) instead of after the opening
+- Chapter 03 "The Couple" rebuilt as a swipeable card deck ("stacked like a book"): photos stacked with rotation/offset, drag/swipe right to cycle, cards loop to the back, gold dot indicator + next arrow button, captions overlaid on each card
+
 ## Backlog
 - P1: Guest wishes form (wishes only, per user) — needs backend + MongoDB
 - P2: Multi-language toggle (Telugu / English)

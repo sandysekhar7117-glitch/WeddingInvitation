@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-export default function DoorStage({ onDone }) {
+export default function DoorStage({ onDone, onTap }) {
   const [opening, setOpening] = useState(false);
   const video2Ref = useRef(null);
   const canvasRef = useRef(null);
@@ -101,7 +101,7 @@ export default function DoorStage({ onDone }) {
       {!opening && (
         <button
           data-testid="door-tap-button"
-          onClick={() => setOpening(true)}
+          onClick={() => { onTap?.(); setOpening(true); }}
           aria-label="Tap to open the invitation"
           className="absolute inset-0 flex items-center justify-center"
         >

@@ -17,11 +17,14 @@ function App() {
     return audioRef.current;
   };
 
-  const handleOpened = useCallback(() => {
-    setStage("invite");
+  const handleTap = useCallback(() => {
     ensureAudio().play()
       .then(() => { window.__musicState = "playing"; })
       .catch((e) => { window.__musicState = "blocked:" + e.name; });
+  }, []);
+
+  const handleOpened = useCallback(() => {
+    setStage("invite");
   }, []);
 
   const toggleMute = useCallback(() => {
@@ -36,7 +39,7 @@ function App() {
       <AnimatePresence>
         {stage === "door" && (
           <motion.div key="door" exit={{ opacity: 0 }} transition={{ duration: 0.8, ease: "easeInOut" }}>
-            <DoorStage onDone={handleOpened} />
+            <DoorStage onDone={handleOpened} onTap={handleTap} />
           </motion.div>
         )}
         {stage === "invite" && (
