@@ -35,6 +35,11 @@ export default function Invitation({ onReplay, toggleMute }) {
           className="h-full w-full scale-110 object-cover blur-[10px]"
         />
         <div className="absolute inset-0 bg-[#061614]/75" />
+        <img
+          src="/assets/radha-krishna.png"
+          alt=""
+          className="absolute bottom-0 left-1/2 h-[65vh] -translate-x-1/2 opacity-[0.09]"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-[#061614]/60 via-transparent to-[#061614]" />
       </motion.div>
       <div className="grain" />
@@ -45,6 +50,18 @@ export default function Invitation({ onReplay, toggleMute }) {
 
       <main className="mx-auto max-w-xl px-6">
         <Chapter index="01" title="The Invitation" testid="chapter-invitation">
+          <motion.div
+            animate={{ y: [0, -8, 0] }}
+            transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+            className="mb-8 flex justify-center"
+          >
+            <img
+              src="/assets/radha-krishna.png"
+              alt="Radha Krishna blessing"
+              data-testid="invitation-deity"
+              className="h-44 drop-shadow-[0_0_30px_rgba(212,175,55,0.35)]"
+            />
+          </motion.div>
           <p className="text-center font-prose text-sm italic tracking-[0.2em] text-[#e5c374]/90">
             || Srirasthu ||&nbsp;&nbsp;|| Shubhamasthu ||&nbsp;&nbsp;|| Avighnamasthu ||
           </p>

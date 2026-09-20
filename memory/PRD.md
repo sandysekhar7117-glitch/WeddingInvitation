@@ -40,11 +40,15 @@ Mobile-first wedding invitation webpage: a dog video (Video1) asks the guest to 
 - New Chapter 03 "The Couple": editorial gallery with 5 user photos (auto-rotated upright, resized to 1600px, lazy-loaded), clipped-frame reveals, gold offset frames, roman-numeral captions; Venue/Celebrations renumbered to 04/05
 - Removed door-stage overlay text that clashed with text baked into the video
 
+## Implemented (20 Sep 2026 — iteration 3)
+- Compressed video2.mp4 (door-opening) from 5.7 MB to 0.92 MB — both videos now under 1 MB each
+- Radha Krishna transparent artwork (StickPNG, 525x830 RGBA) added as: golden-glow floating emblem atop Chapter 01 (mirrors the deity emblem on the physical card), small emblem above the hero names, and a faint 9%-opacity watermark in the fixed background
+- RSVP preference noted for later: wishes only, no attendance fields
+
 ## Backlog
-- P1: RSVP / guest wishes form (needs backend + MongoDB)
+- P1: Guest wishes form (wishes only, per user) — needs backend + MongoDB
 - P2: Multi-language toggle (Telugu / English)
-- P2: Compress video2.mp4 further (currently 5.5 MB)
 
 ## Next Tasks
-1. Ask user if RSVP form is wanted
-2. Optional: compress video2.mp4
+1. Build wishes-only guest form if user confirms
+2. Optional: Telugu translations of the invitation text

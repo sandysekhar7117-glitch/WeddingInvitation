@@ -24,6 +24,16 @@ export default function Hero() {
   return (
     <header ref={ref} className="relative flex min-h-[100dvh] flex-col items-center justify-center px-6 text-center" data-testid="hero">
       <motion.div style={{ y, opacity }} className="flex flex-col items-center">
+        <MaskedLine delay={0.05} className="mb-5">
+          <div className="flex justify-center">
+            <img
+              src="/assets/radha-krishna.png"
+              alt="Radha Krishna"
+              data-testid="hero-deity"
+              className="h-16 drop-shadow-[0_0_18px_rgba(212,175,55,0.45)]"
+            />
+          </div>
+        </MaskedLine>
         <MaskedLine delay={0.15}>
           <p className="font-prose text-xs uppercase italic tracking-[0.5em] text-[#e5c374]/85">
             The Wedding Of
