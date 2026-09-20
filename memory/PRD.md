@@ -51,6 +51,11 @@ Mobile-first wedding invitation webpage: a dog video (Video1) asks the guest to 
 - Chapter 01: removed floating deity emblem and the closing "Kindly grace…" paragraph
 - Background: user's uploaded peacock photo now clearly visible as blurred page background (fixed stacking bug — opaque .App/body backgrounds were painting over the -z-10 layer; removed them). Overlay tuned to 55% for readability, Radha Krishna watermark faintly behind hero
 
+## Implemented (20 Sep 2026 — iteration 5, background swap)
+- Backgrounds changed to user's two uploaded Radha Krishna silhouette photos: moonlit flute scene (bg-hero.jpg, lightly blurred behind hero names) and golden wall couple scene (bg-page.jpg, blurred fixed page background)
+- Removed the transparent Radha Krishna watermark sticker (superseded by the photographic backgrounds)
+- Hero names sit over the glowing moon with a radial vignette for readability
+
 ## Backlog
 - P1: Guest wishes form (wishes only, per user) — needs backend + MongoDB
 - P2: Multi-language toggle (Telugu / English)

@@ -22,8 +22,11 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
 
   return (
-    <header ref={ref} className="relative flex min-h-[100dvh] flex-col items-center justify-center px-6 text-center" data-testid="hero">
-      <motion.div style={{ y, opacity }} className="flex flex-col items-center">
+    <header ref={ref} className="relative flex min-h-[100dvh] flex-col items-center justify-center overflow-hidden px-6 text-center" data-testid="hero">
+      <img src="/assets/bg-hero.jpg" alt="" className="absolute inset-0 h-full w-full scale-110 object-cover blur-[3px]" />
+      <div className="absolute inset-0 bg-[#061614]/40" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,22,20,0.55)_0%,transparent_72%)]" />
+      <motion.div style={{ y, opacity }} className="relative z-10 flex flex-col items-center">
         <MaskedLine delay={0.15}>
           <p className="font-prose text-xs uppercase italic tracking-[0.5em] text-[#e5c374]/85">
             The Wedding Of
@@ -50,7 +53,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.6, duration: 1 }}
-        className="absolute bottom-10 flex flex-col items-center gap-2 text-[#e5c374]/70"
+        className="absolute bottom-10 z-10 flex flex-col items-center gap-2 text-[#e5c374]/70"
       >
         <span className="font-prose text-[0.65rem] uppercase tracking-[0.35em]">Scroll</span>
         <motion.span animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}>

@@ -30,16 +30,11 @@ export default function Invitation({ onReplay, toggleMute }) {
     <div className="relative min-h-screen" data-testid="invitation-page">
       <motion.div ref={bgRef} style={{ y: bgY }} className="fixed inset-0 -z-10">
         <img
-          src="/assets/background.jpg"
+          src="/assets/bg-page.jpg"
           alt=""
           className="h-full w-full scale-110 object-cover blur-[6px]"
         />
         <div className="absolute inset-0 bg-[#061614]/55" />
-        <img
-          src="/assets/radha-krishna.png"
-          alt=""
-          className="absolute bottom-0 left-1/2 h-[65vh] -translate-x-1/2 opacity-[0.09]"
-        />
         <div className="absolute inset-0 bg-gradient-to-b from-[#061614]/35 via-transparent to-[#061614]/80" />
       </motion.div>
       <div className="grain" />
